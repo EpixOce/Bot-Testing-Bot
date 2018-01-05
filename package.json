@@ -6,6 +6,9 @@
   "scripts": {
     "start": "node bot.js"
   },
+  "keywords": [],
+  "author": "Epix#4002",
+  "license": "ISC",
   "dependencies": {
     "discord.js": "11.1.0",
     "request": "2.81.0"
