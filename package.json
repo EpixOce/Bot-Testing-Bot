@@ -1,6 +1,6 @@
 {
-  "name": "Bot-Testing-Bot",
-  "description": "Test",
+  "name": "Disboard",
+  "description": "",
   "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
