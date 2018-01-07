@@ -5,9 +5,9 @@ exports.run = (client, message, args) => {
         author: {
             name: "Lostina Bank"
         },
-        title: "",
-        url: "",
-        description: "",
+        title: "Click Here to access Lostina's Bank, or copy the link below.",
+        url: "https://docs.google.com/spreadsheets/d/1iAxOKLmsng5cjkn0m0-IKU9uOSkXWY7FWUjeIIJSvok/edit?usp=sharing",
+        description: "https://docs.google.com/spreadsheets/d/1iAxOKLmsng5cjkn0m0-IKU9uOSkXWY7FWUjeIIJSvok/edit?usp=sharing",
         timestamp: new Date(),
         footer: {
           text: ""
