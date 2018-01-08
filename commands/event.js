@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
         author: {
             name: "Fidget Spinner Event! Prizes to be won!"
         },
-        description: "**First Place:** YukiNeko - 82305\n**Second Place:** n/a\n**Third Place:** n/a",
+        description: "**First Place:** YukiNeko - 82305\n**Second Place:** Sora_Gaming99 - 80411\n**Third Place:** Planeswalker15 - 50176",
         timestamp: new Date(),
         footer: {
           text: ""
