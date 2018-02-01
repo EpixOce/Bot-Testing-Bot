@@ -1,6 +1,6 @@
 exports.run = (client, message, args) => {
     setTimeout(function() {
-        message.reply(" **Adventure!** :notes:");
+        message.channel.send(`message.author.username`" **Adventure!** :notes:");
     }, 14850)
 };
 
