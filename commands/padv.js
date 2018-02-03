@@ -5,6 +5,3 @@ exports.run = (client, message, args) => {
     }, 19750)
 };
 
- message.channel.send(`${message.author.username}` + ", **Adventure!** :notes:");
-
-message.reply(" **Party Adventure!**, make sure it is your turn! :cherries:");
