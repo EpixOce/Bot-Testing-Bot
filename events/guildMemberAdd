@@ -1,4 +1,4 @@
 exports.run = (client, member) => {
-  const welcomeChannel = guildmember.guild.channels.id = 274002390070591488;
+  const welcomeChannel = member.guildchannel.id = 274002390070591488;
   welcomeChannel.send(`${member.user}, welcome to **Deciduous!** Enjoy your stay here.`).catch(console.error);
 }
