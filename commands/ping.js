@@ -1,6 +1,4 @@
 exports.run = (client, message, args) => {
-  const m = await message.channel.send(`/${command}.js`);
-    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
-  }
+  message.channel.send(`Pong! \`${client.pings[0]}ms\``);
 };
 
