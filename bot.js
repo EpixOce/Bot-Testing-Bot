@@ -8,6 +8,16 @@ client.on("message", message => {
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  
+  fs.readdir("./events/", (err, files) => {
+  if (err) return console.error(err);
+  files.forEach(file => {
+    let eventFunction = require(`./events/${file}`);
+    let eventName = file.split(".")[0];
+    
+    client.on(eventName, (...args) => eventFunction.run(client, ...args));
+  });
+});
 
   try {
     let commandFile = require(`./commands/${command}.js`);
