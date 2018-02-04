@@ -14,7 +14,6 @@ client.on("message", message => {
   };
   
   if(responseMsg[message.content]) {
-    message.delete();
     message.channel.send(responseMsg[message.content]);
   }
   
