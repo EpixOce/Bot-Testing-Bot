@@ -21,4 +21,16 @@ client.on("message", message => {
   }
 });
 
+client.on("guildMemberAdd", (member) => {
+  const guild = member.guild;
+  if (!newUsers[guild.id]) newUsers[guild.id] = new Discord.Collection();
+  newUsers[guild.id].set(member.id, member.user);
+
+  if (newUsers[guild.id].size > 0) {
+    const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
+    guild.channels.get(guild.id).send(userlist + ", welcome to **Deciduous!** Enjoy your stay here.);
+    newUsers[guild.id].clear();
+  }
+});
+
 client.login(process.env.BOT_TOKEN);
