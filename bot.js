@@ -28,7 +28,7 @@ client.on("guildMemberAdd", (member) => {
 
   if (newUsers[guild.id].size > 0) {
     const userlist = newUsers[guild.id].map(u => u.toString()).join(" ");
-    guild.channels.get(guild.id).send(userlist + ", welcome to **Deciduous!** Enjoy your stay here.);
+    guild.channels.get(guild.id).send(userlist + ", welcome to **Deciduous!** Enjoy your stay here.");
     newUsers[guild.id].clear();
   }
 });
