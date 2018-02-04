@@ -6,6 +6,15 @@ const config = require("./config.json");
 
 client.on("message", message => {
   if (message.author.bot) return;  
+  
+  if (message.content.startsWith("Puck")) {
+    message.channel.send("https://cdn.discordapp.com/avatars/266843583636570112/61c25e8b86fb31970376e01f04f59ba7.png?size=512");
+  } else
+
+  if (message.content.startsWith("player")) {
+    message.channel.send("https://cdn.discordapp.com/avatars/226358745897238529/dfdaa189ffeaf473e9cd4404e00cc43e.png?size=512");
+  }
+  
   if(message.content.indexOf(config.prefix) !== 0) return;
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
