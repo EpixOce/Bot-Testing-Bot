@@ -7,8 +7,8 @@ client.on("message", message => {
   if (message.author.bot) return;  
   
   const responseMsg = {
-    "#!adv": "The prefix in this server is `,`",
-    "#!stats": "The prefix in this server is `,`"
+    "#!adv": "`,adv`. The prefix in this server is `,`",
+    "#!stats": "`,stats`. The prefix in this server is `,`"
   };
   
   if(responseMsg[message.content]) {
