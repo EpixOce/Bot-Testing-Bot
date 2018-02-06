@@ -8,7 +8,8 @@ client.on("message", message => {
   if (message.author.bot) return;  
   
   const responseMsg = {
-    "Do Not Disturb": "https://images-na.ssl-images-amazon.com/images/I/71dDwooliwL._SL1500_.jpg"    
+    "#!adv": "`,adv`. The prefix in this server is `,`"
+    "#!stats": "`,stats`. The prefix in this server is `,`"
   };
   
   if(responseMsg[message.content]) {
