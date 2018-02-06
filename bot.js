@@ -14,7 +14,7 @@ client.on("message", message => {
   
   if(responseMsg[message.content]) {
     message.channel.send(responseMsg[message.content]);
-  }
+  };
   
   if(message.content.indexOf(config.prefix) !== 0) return;
 
