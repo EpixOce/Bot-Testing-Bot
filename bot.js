@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const fs = require("fs");
 
 const config = require("./config.json");
 
@@ -8,7 +7,7 @@ client.on("message", message => {
   if (message.author.bot) return;  
   
   const responseMsg = {
-    "#!adv": "The prefix in this server is `,`"
+    "#!adv": "The prefix in this server is `,`",
     "#!stats": "The prefix in this server is `,`"
   };
   
