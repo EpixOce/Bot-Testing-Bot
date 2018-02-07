@@ -1,3 +1,3 @@
 # Error - RPG Timer
 
-Error
+Error!
