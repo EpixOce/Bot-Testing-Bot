@@ -7,7 +7,7 @@ client.on("ready", () => {
   
   console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
   
-  client.user.setPresence(`grinding DRPG`);
+  client.user.setPresence({game: "Discord Dungeons!"});
 });
 
 client.on("message", message => {
