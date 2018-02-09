@@ -8,8 +8,8 @@ client.on("message", message => {
   
   const responseMsg = {
     "#!adv": ":x: The prefix in this server is `,`",
-    "#!stats": ":x: The prefix in this server is `,`"
-    "#!chop": "`${message.author.username}` went to chop some wood but fell"
+    "#!stats": ":x: The prefix in this server is `,`",
+    "#!chop": ":deciduous_tree:" + `${message.author.username}` + " went to chop some wood but fell into a pithall. :skull:\nThe prefix here is `,`"
   };
   
   if(responseMsg[message.content]) {
