@@ -9,10 +9,10 @@ client.on("message", message => {
   const responseMsg = {
     "#!adv": ":x: The prefix in this server is `,`",
     "#!stats": ":x: The prefix in this server is `,`",
-    "#!chop": ":deciduous_tree: " + `${message.author.username}` + " went to chop some wood but fell into a pithall. :skull:\nThe prefix here is `,`",
-    "#!mine": ":pick: " + `${message.author.username}` + " found a Cinnarbar, got poisoned and died. :skull:\n The prefix here is `,`",
-    "#!forage": ":tulip: " + `${message.author.username}` + " went foraging and got stung by bees. :skull:\nThe prefix in this server is `,`",
-    "#!fish": ":fishing_pole_and_fish: " + `${message.author.username}` + " caught a shark and got their head bitten off. :skull:\nThe prefix in this server is `,`"
+    "#!chop": ":deciduous_tree: " + `${message.author.username}` + " went to chop some wood but fell into a pithall. :hole:",
+    "#!mine": ":pick: " + `${message.author.username}` + " found a Cinnarbar, got poisoned and died. :skull:",
+    "#!forage": ":tulip: " + `${message.author.username}` + " went foraging and got stung by bees. :bee:",
+    "#!fish": ":fishing_pole_and_fish: " + `${message.author.username}` + " caught a shark and got their head bitten off. :shark:"
   };
   
   if(responseMsg[message.content]) {
