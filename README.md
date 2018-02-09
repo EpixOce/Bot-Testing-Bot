@@ -1,3 +1,2 @@
-# Error - RPG Timer
+# Grind-Zone's RPG Timer
 
-Error!
