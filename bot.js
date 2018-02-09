@@ -3,6 +3,10 @@ const client = new Discord.Client();
 
 const config = require("./config.json");
 
+client.on("ready", () => {
+  client.user.setGame("grinding DRPG");
+});
+
 client.on("message", message => {
   if (message.author.bot) return;  
   
