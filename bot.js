@@ -3,11 +3,8 @@ const client = new Discord.Client();
 
 const config = require("./config.json");
 
-client.on("ready", () => {
-  
-  console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-  
-  client.user.setPresence({game: "Discord Dungeons!"});
+client.on("ready", () => {  
+  client.user.setPresence({ status: 'online', game: { name: 'Discord Dungeons!' }});
 });
 
 client.on("message", message => {
