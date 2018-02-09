@@ -15,7 +15,7 @@ client.on("message", message => {
   
   const responseMsg = {
     "#!adv": ":x: The prefix in this server is `,`",
-    "#!stats": ":x: The prefix in this server is `,`"
+    "#!stats": ":x: The prefix in this server is `,`",
     "#!chop": ":deciduous_tree: " + `${message.author.username}` + " went to chop some wood but fell into a pithall. :hole:",
     "#!mine": ":pick: " + `${message.author.username}` + " found a Cinnarbar, got poisoned and died. :skull:",
     "#!forage": ":tulip: " + `${message.author.username}` + " went foraging and got stung by bees. :bee:",
@@ -40,4 +40,4 @@ client.on("message", message => {
   }
 });
 
-client.login(process.env.BOT_TOKEN);
+
