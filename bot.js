@@ -9,6 +9,7 @@ client.on("message", message => {
   const responseMsg = {
     "#!adv": ":x: The prefix in this server is `,`",
     "#!stats": ":x: The prefix in this server is `,`"
+    "#!chop": "`${message.author.username}` went to chop some wood but fell"
   };
   
   if(responseMsg[message.content]) {
