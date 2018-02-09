@@ -4,7 +4,7 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on("ready", () => {  
-  client.user.setPresence({game: 'Discord Dungeons!' });
+  client.user.setPresence({game: { name: 'Discord Dungeons!'}});
 });
 
 client.on("message", message => {
