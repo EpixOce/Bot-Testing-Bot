@@ -1,2 +1,2 @@
-# Grind-Zone's RPG Timer
+# Unnamed RPG Timer
 
