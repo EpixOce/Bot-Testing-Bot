@@ -13,7 +13,8 @@ client.on("message", message => {
     "#!mine": ":pick: " + `${message.author.username}` + " found a Cinnarbar, got poisoned and died.",
     "#!forage": ":tulip: " + `${message.author.username}` + " went foraging and got stung by bees.",
     "#!fish": ":fishing_pole_and_fish: " + `${message.author.username}` + " caught a shark and got their head bitten off.",
-    "#!search": "You search the location, and found a toxic apple, but since you're not that smart, you ate it. - Pato Deep Web, and his best wishes for your afterlife."
+    "#!search": "You search the location, and found a toxic apple, but since you're not that smart, you ate it. - Pato Deep Web, and his best wishes for your afterlife.",
+    "#!catch": `${message.author.username}` + " tried to catch the insanely agile Epix, but failed and sprained his ankles in the process."
   };
   
   if(responseMsg[message.content]) {
