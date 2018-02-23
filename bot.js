@@ -6,7 +6,7 @@ const config = require("./config.json");
 client.on("message", message => {
   if (message.author.bot) return;  
   
-  const responseMsg = {
+  const reply = {
     "#!adv": ":x: The prefix in this server is `,`",
     "#!stats": ":x: The prefix in this server is `,`",
     "#!chop": ":deciduous_tree: " + `${message.author.username}` + " went to chop some wood but fell into a pithall.",
@@ -17,8 +17,8 @@ client.on("message", message => {
     "#!catch": `${message.author.username}` + " tried to catch the insanely agile Epix, but failed and sprained his ankles in the process."
   };
   
-  if(responseMsg[message.content]) {
-    message.channel.send(responseMsg[message.content]);
+  if(reply[message.content.toLowerCase()]) {
+    message.channel.send(reply[message.content]);
   };
   
   if(message.content.indexOf(config.prefix) !== 0) return;
