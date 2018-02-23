@@ -27,7 +27,7 @@ client.on("message", message => {
     message.channel.send(reply[message.content]);
   };
   
-  if (message.content.startsWith(",adv)) {
+  if (message.content.startsWith(",adv")) {
     if (!count[message.author.id]) count[message.author.id] = {
     count: 0,
       }
