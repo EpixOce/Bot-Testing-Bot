@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
-const client = new Discord.Client();
 const fs = require("fs");
+const client = new Discord.Client();
+
 
 let count = JSON.parse(fs.readFileSync("./count.json", "utf8"));
 
