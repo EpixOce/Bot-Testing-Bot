@@ -20,7 +20,7 @@ client.on("message", message => {
   
   const replymsg = reply.message.content.toLowercase();
   
-  if(replymsg[message.content]) {
+  if(replymsg) {
     message.channel.send(replymsg[message.content]);
   };
   
