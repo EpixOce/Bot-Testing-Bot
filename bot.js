@@ -12,6 +12,7 @@ client.on("message", message => {
     "#!stats": ":x: The prefix in this server is `,`",
     "#!rules": ":arrow_down: There are some simple rules that you will need to follow here in this server!\n-----\n \n:one: **Spamming or clogging the chat (applies to pings as well), will result in a mute by a staff.**\n \n:two: **Use the channels according to their purpose.**\n \n:three: **Inappropriate or rude nicknames, messages, links and posts will not be tolerated.**\n \n:four: **No NSFW content anywhere in this server.**\n \n:five: **Treat others with respect, and enjoy your time here in Error!**\n \n-----\n:warning: **The staff reserve the rights to punish you for breaking the rules, punishment would be decided by the staff's judgement.**\n \nFollow these rules and have fun grinding!",
     "#!changelog": ":arrow_down: __**Changelog of Unnamed RPG Timer:**__ :arrow_down:\n \nAdded commands:\n - #!search\n - #!catch\n - #!pet\n - #!rules (for Anonymous server)\n - #!changelog",
+    "#!server": "Permanent Invite link to join **DiscordRPG - Anonymous**\nhttps://discord.gg/hH7ZuNv"
     "#!chop": ":deciduous_tree: " + `${message.author.username}` + " went to chop some wood but fell into a pithall.",
     "#!mine": ":pick: " + `${message.author.username}` + " found a Cinnarbar, got poisoned and died.",
     "#!forage": ":tulip: " + `${message.author.username}` + " went foraging and got stung by bees.",
@@ -24,11 +25,6 @@ client.on("message", message => {
   if(reply[message.content]) {
     message.channel.send(reply[message.content]);
   };
-  
-  if(message.content.startsWith("#!invite") {
-    message.guild.channels.get('410247551942656001').createInvite().then(invite =>
-    message.channel.send(invite.url)
-);
   
   if(message.content.indexOf(config.prefix) !== 0) return;
 
