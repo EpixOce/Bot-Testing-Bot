@@ -1,5 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const fs = require("fs");
+
+let count = JSON.parse(fs.readFileSync("./count.json", "utf8"));
 
 const config = require("./config.json");
 
@@ -23,6 +26,19 @@ client.on("message", message => {
   if(reply[message.content]) {
     message.channel.send(reply[message.content]);
   };
+  
+  if (message.content.startsWith(",adv)) {
+    if (!count[message.author.id]) count[message.author.id] = {
+    count: 0,
+      }
+      let usercount = count[message.author.id];
+      usercount.count++;
+      fs.writeFile("./count.json", JSON.stringify(count), (err) => {
+    if (err) console.error(err)
+  };
+  if (message.content.startsWith(prefix + "level")) {
+    message.reply(`You have adventured ${usercountcount} times!`);
+  }
   
   if(message.content.indexOf(config.prefix) !== 0) return;
 
