@@ -25,10 +25,10 @@ client.on("message", message => {
     message.channel.send(reply[message.content]);
   };
   
-  if(message.content.startsWith("Test") {
-     if (message.author.id !== '290699205255626752') return;
-  message.channel.send("Testing!\nThis Text should only be accessible by Epix!")
-};
+  if(message.content.startsWith("#!invite") {
+    message.guild.channels.get('410247551942656001').createInvite().then(invite =>
+    message.channel.send(invite.url)
+);
   
   if(message.content.indexOf(config.prefix) !== 0) return;
 
