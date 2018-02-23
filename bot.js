@@ -19,7 +19,6 @@ client.on("message", message => {
   };
   
   if(reply[message.content]) {
-    reply.message.content.toLowerCase();
     message.channel.send(reply[message.content]);
   };
   
