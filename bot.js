@@ -19,7 +19,7 @@ client.on("message", message => {
   };
   
   if(reply.message.content.shift().toLowercase()) {
-    message.channel.send(replymsg[message.content]);
+    message.channel.send(reply[message.content]);
   };
   
   if(message.content.indexOf(config.prefix) !== 0) return;
