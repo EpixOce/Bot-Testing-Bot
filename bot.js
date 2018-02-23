@@ -22,6 +22,7 @@ client.on("message", message => {
   };
   
   if(message.content.indexOf(config.prefix) !== 0) return;
+  if(message.content.indexOf(config.prefix2) !== 0) return;
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const cmdargs = message.content.slice(config.prefix2.length).trim().split(/ +/g);
