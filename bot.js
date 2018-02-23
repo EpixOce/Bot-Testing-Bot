@@ -17,7 +17,7 @@ client.on("message", message => {
     "#!fish": ":fishing_pole_and_fish: " + `${message.author.username}` + " caught a shark and got their head bitten off.",
     "#!search": "He vanished. You search for the whereabouts of Epix, but you couldn't see anyone in sight, well, **you never saw him coming** in the first place anyways...",
     "#!catch": `${message.author.username}` + " tried to catch the insanely wealthy AnimeFan, but were bombarded by money bags falling out of nowhere. :moneybag:\nYou're rich now, in your afterlife anyways.",
-    "#!pet": `${message.author.username}` + " has signed a contract to become AnimeFan's pet.",
+    "#!pet": `${message.author.username}` + " has signed a contract to become AnimeFan's pet."
   };
   
   if(reply[message.content]) {
