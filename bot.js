@@ -35,6 +35,8 @@ client.on("message", message => {
     
     let cmdrepliesFile = require(`./cmdreplies/${command}.js`);
     cmdrepliesFile.run(client, message, cmdargs);
+  } catch (err) {
+    console.error(err);
   }
 });
 
