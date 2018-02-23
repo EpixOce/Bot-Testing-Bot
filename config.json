@@ -1,2 +1,5 @@
-const prefix = ","
-const prefix2 = "#!"
+{
+  "prefix": ",",
+  "prefix2": "#!"
+}
+
