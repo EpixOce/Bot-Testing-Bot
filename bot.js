@@ -18,9 +18,7 @@ client.on("message", message => {
     "#!catch": `${message.author.username}` + " tried to catch the insanely agile Epix, but failed and sprained his ankles in the process."
   };
   
-  const replymsg = reply.message.content.shift().toLowercase();
-  
-  if(replymsg) {
+  if(reply.message.content.shift().toLowercase()) {
     message.channel.send(replymsg[message.content]);
   };
   
