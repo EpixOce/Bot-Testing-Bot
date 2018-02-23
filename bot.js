@@ -18,8 +18,10 @@ client.on("message", message => {
     "#!catch": `${message.author.username}` + " tried to catch the insanely agile Epix, but failed and sprained his ankles in the process."
   };
   
-  if(reply[message.content.toLowerCase(reply)]) {
-    message.channel.send(reply[message.content]);
+  const replymsg = reply.message.content.toLowercase();
+  
+  if(replymsg[message.content]) {
+    message.channel.send(replymsg[message.content]);
   };
   
   if(message.content.indexOf(config.prefix) !== 0) return;
