@@ -38,7 +38,7 @@ client.on("message", message => {
   };
   if (message.content.startsWith(prefix + "level")) {
     message.reply(`You have adventured ${usercountcount} times!`);
-  }
+  };
   
   if(message.content.indexOf(config.prefix) !== 0) return;
 
