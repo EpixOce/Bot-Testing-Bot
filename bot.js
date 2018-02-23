@@ -8,6 +8,7 @@ client.on("message", message => {
   
   const reply = {
     "#!adv": ":x: The prefix in this server is `,`",
+    "Test": "Testing 1, 2, 3.",
     "#!stats": ":x: The prefix in this server is `,`",
     "#!chop": ":deciduous_tree: " + `${message.author.username}` + " went to chop some wood but fell into a pithall.",
     "#!mine": ":pick: " + `${message.author.username}` + " found a Cinnarbar, got poisoned and died.",
@@ -17,7 +18,7 @@ client.on("message", message => {
     "#!catch": `${message.author.username}` + " tried to catch the insanely agile Epix, but failed and sprained his ankles in the process."
   };
   
-  if(reply[message.content]) {
+  if(reply[message.content.toLowerCase()]) {
     message.channel.send(reply[message.content]);
   };
   
@@ -34,21 +35,6 @@ client.on("message", message => {
   }
 });
 
-client.on("message", message => {
-  if (message.author.bot) return;
-  
-  if(message.content.indexOf(config2.prefixtwo) !== 0) return;
-  
-  const cmdargs = message.content.slice(config2.prefixtwo.length).trim().split(/ +/g);
-  const command = cmdargs.shift().toLowerCase();
-  
-  try {
-    let cmdrepliesFile = require(`./cmdreplies/${command}.js`);
-    cmdrepliesFile.run(client, message, cmdargs);
-  } catch (err) {
-    console.error(err);
-  }
-});
 
 client.login(process.env.BOT_TOKEN);
 
