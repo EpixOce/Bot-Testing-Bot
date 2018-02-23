@@ -17,13 +17,14 @@ client.on("message", message => {
     "#!catch": `${message.author.username}` + " tried to catch the insanely agile Epix, but failed and sprained his ankles in the process."
   };
   
-  if(reply[message.content.toLowerCase]) {
+  if(reply[message.content]) {
     message.channel.send(reply[message.content]);
   };
   
   if(message.content.indexOf(config.prefix) !== 0) return;
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+  const cmdargs = message.content.slice(config.prefix2.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
 
   try {
@@ -32,6 +33,8 @@ client.on("message", message => {
   } catch (err) {
     console.error(err);
     
+    let cmdrepliesFile = require(`./cmdreplies/${command}.js`);
+    cmdrepliesFile.run(client, message, cmdargs);
   }
 });
 
