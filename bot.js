@@ -30,11 +30,12 @@ client.on("message", message => {
   
   if (message.content.startsWith(",adv")) {
     if (!count[message.author.id]) count[message.author.id] = {
-    count: 0,
-      }
-      let usercount = count[message.author.id];
-      usercount.count++;
-      fs.writeFile("./count.json", JSON.stringify(count), (err) => {
+    count: 0
+    };
+    let usercount = count[message.author.id];
+    usercount.count++;
+    
+    fs.writeFile("./count.json", JSON.stringify(count), (err) => {
     if (err) console.error(err)
   };
   if (message.content.startsWith(prefix + "level")) {
