@@ -37,10 +37,10 @@ client.on("message", message => {
 client.on("message", message => {
   if (message.author.bot) return;
   
-  if(message.content.indexOf(config.prefixtwo) !== 0) return;
+  if(message.content.indexOf(config2.prefixtwo) !== 0) return;
   
-  const cmdargs = message.content.slice(config.prefixtwo.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
+  const cmdargs = message.content.slice(config2.prefixtwo.length).trim().split(/ +/g);
+  const command = cmdargs.shift().toLowerCase();
   
   try {
     let cmdrepliesFile = require(`./cmdreplies/${command}.js`);
