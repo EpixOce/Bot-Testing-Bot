@@ -2,9 +2,6 @@ const Discord = require("discord.js");
 const fs = require("fs");
 const client = new Discord.Client();
 
-
-let count = JSON.parse(fs.readFileSync("./count.json", "utf8"));
-
 const config = require("./config.json");
 
 client.on("message", message => {
@@ -27,6 +24,8 @@ client.on("message", message => {
   if(reply[message.content]) {
     message.channel.send(reply[message.content]);
   };
+  
+  let count = JSON.parse(fs.readFileSync("./count.json", "utf8"));
   
   if (message.content.startsWith(",adv")) {
     if (!count[message.author.id]) count[message.author.id] = {
