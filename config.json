@@ -1,4 +1,2 @@
-{
-"prefix": ",",
-"prefix2": "#!"
-}
+const prefix = ","
+const prefix2 = "#!"
