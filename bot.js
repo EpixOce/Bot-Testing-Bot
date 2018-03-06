@@ -30,7 +30,6 @@ client.on("message", message => {
 
     setTimeout(function() {
       if (!message.author.id == "414054407932608513") return;
-      if (!message.author.id == "196203663054733313") return;
         message.reply("**Adventure!** :arrow_down:");
     }, 13900)
   }
