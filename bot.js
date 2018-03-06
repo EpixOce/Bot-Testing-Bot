@@ -8,8 +8,6 @@ client.on("message", message => {
   
   if (message.author.bot) return;
   
-  if (!message.author.id == "414054407932608513") return;
-  
   const reply = {
     "#!adv": ":x: The prefix in this server is `,`",
     "#!stats": ":x: The prefix in this server is `,`",
