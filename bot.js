@@ -26,11 +26,10 @@ client.on("message", message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-  const ignoreid = 290699205255626752
-  
   if (command === "adv") {
-    if (message.author.id(ignoreid)) return;
+
     setTimeout(function() {
+      if (!message.author.id == "414054407932608513") return;
         message.reply("**Adventure!** :arrow_down:");
     }, 13900)
   }
