@@ -5,7 +5,10 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on("message", message => {
+  
   if (message.author.bot) return;
+  
+  if (!message.author.id == "414054407932608513") return; message.channel.send(`${message.author.username}` + ", you are forbidden to use this bot! DM @Epix#4002 for more information.");
   
   const reply = {
     "#!adv": ":x: The prefix in this server is `,`",
@@ -29,7 +32,6 @@ client.on("message", message => {
   if (command === "adv") {
 
     setTimeout(function() {
-      if (!message.author.id == "414054407932608513") return;
         message.reply("**Adventure!** :arrow_down:");
     }, 13900)
   }
