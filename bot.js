@@ -43,8 +43,7 @@ client.on("message", message => {
   setTimeout(function() {
         message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
     }, 19750)
-  };
-  
+  }
 });
 
 
