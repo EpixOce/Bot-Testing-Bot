@@ -4,6 +4,8 @@ const client = new Discord.Client();
 
 const config = require("./config.json");
 
+guild.leave()
+
 client.on("message", message => {
   
   if (message.author.bot) return;
