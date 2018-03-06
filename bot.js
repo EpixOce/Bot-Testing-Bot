@@ -26,7 +26,7 @@ client.on("message", message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-  const ignoreid = 196203663054733313
+  const ignoreid = 290699205255626752
   
   if (command === "adv") {
     if (message.author.id(ignoreid)) return;
