@@ -8,7 +8,7 @@ client.on("message", message => {
   
   if (message.author.bot) return;
   
-  if (!message.author.id == "414054407932608513") return; message.channel.send(`${message.author.username}` + ", you are forbidden to use this bot! DM @Epix#4002 for more information.");
+  if (!message.author.id == "414054407932608513") return;
   
   const reply = {
     "#!adv": ":x: The prefix in this server is `,`",
