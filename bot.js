@@ -5,7 +5,8 @@ const client = new Discord.Client();
 const config = require("./config.json");
 
 client.on("message", message => {
-  if (message.author.bot) return;  
+  if (message.author.bot) return;
+  if (message.author.id !== 196203663054733313) return;
   
   const reply = {
     "#!adv": ":x: The prefix in this server is `,`",
