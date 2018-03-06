@@ -27,7 +27,7 @@ client.on("message", message => {
   const command = args.shift().toLowerCase();
   
   if (command === "adv") {
-    if (message.author.id !== '196203663054733313') return;
+    if (message.author.id !== "196203663054733313") return;
     setTimeout(function() {
         message.reply("**Adventure!** :arrow_down:");
     }, 13900)
