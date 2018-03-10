@@ -11,7 +11,7 @@ client.on("message", message => {
   const reply = {
     "#!adv": ":x: The prefix in this server is `,`",
     "#!stats": ":x: The prefix in this server is `,`",
-    "#!server": ":arrow_down: Permanent Invite link to the server! :arrow_down:\n \nhttps://discord.gg/hH7ZuNv",
+    "#!server": ":arrow_down: Permanent Invite link to the server! :arrow_down:\nhttps://discord.gg/hH7ZuNv",
     "#!chop": ":deciduous_tree: " + `${message.author.username}` + " went to chop some wood but fell into a pithall.",
     "#!mine": ":pick: " + `${message.author.username}` + " found a Cinnarbar, got poisoned and died.",
     "#!forage": ":tulip: " + `${message.author.username}` + " went foraging and got stung by bees.",
