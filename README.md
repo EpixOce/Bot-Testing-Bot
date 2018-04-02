@@ -1,2 +1,2 @@
-# Unnamed RPG Timer
+# Potato Timer
 
