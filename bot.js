@@ -28,6 +28,7 @@ client.on("message", message => {
   const command = args.shift().toLowerCase();
   
   if (command === "adv") {
+
     setTimeout(function() {
         message.reply("**Adventure!** :arrow_down:");
     }, 13900)
@@ -39,9 +40,12 @@ client.on("message", message => {
         message.reply(" **Sides!** :carrot:");
     }, 300000)
   }
-  
+  if (command === "padv") {
+  setTimeout(function() {
+        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
+    }, 19750)
+  }
 });
 
 
 client.login(process.env.BOT_TOKEN);
-
