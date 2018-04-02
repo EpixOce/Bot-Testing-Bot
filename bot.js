@@ -3,7 +3,6 @@ const fs = require("fs");
 const client = new Discord.Client();
 
 const config = require("./config.json");
-const configg = require("./configg.json");
 
 client.on("message", message => {
   
@@ -45,28 +44,7 @@ client.on("message", message => {
     setTimeout(function() {
         message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
     }, 19750)
-  }    
-  
-  const arggs = message.content.slice(configg.prefixx.length).trim().split(/ +/g);
-  const commandd = arggs.shift().toLowerCase();
-  
-  if (commandd === "hunt") {
-    setTimeout(function() {
-      message.channel.send(`${message.author.username}` + "**, it's time to hunt!**");
-    }, 60000)
-  }
-  
-  if (commandd === "fish") {
-    setTimeout(function() {
-      message.channel.send(`${message.author.username}` + "**, it's time to fish!**");
-    }, 120000)
   }  
-  
-  if (commandd === "kill") {
-    setTimeout(function() {
-      message.reply("**it's time to kill!**");
-    }, 180000)
-  }
   
   }
 });
