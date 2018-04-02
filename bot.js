@@ -26,26 +26,40 @@ client.on("message", message => {
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
+  const arggs = message.content.slice(configg.prefix.length).trim().split(/ +/g);
+  const commandd = arggs.shift().toLowerCase();
   
   if (command === "adv") {
     setTimeout(function() {
         message.reply("**Adventure!** :arrow_down:");
     }, 13900)
   }
-  
   if (command === "sides") {
     message.channel.send(`${message.author.username}` + ", **Sides Timer Set!**")
     setTimeout(function() {
         message.reply(" **Sides!** :carrot:");
     }, 300000)
   }
-  
   if (command === "padv") {
     setTimeout(function() {
         message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
     }, 19750)
   }  
-  
+  if (commandd === "hunt") {
+    setTimeout(function() {
+        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
+    }, 19750)
+  }
+  if (commandd === "fish") {
+    setTimeout(function() {
+        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
+    }, 19750)
+  }
+  if (commandd === "kill") {
+    setTimeout(function() {
+        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
+    }, 19750)
+  }
   }
 });
 
