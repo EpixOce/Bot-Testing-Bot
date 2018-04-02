@@ -28,12 +28,10 @@ client.on("message", message => {
   const command = args.shift().toLowerCase();
   
   if (command === "adv") {
-
     setTimeout(function() {
         message.reply("**Adventure!** :arrow_down:");
     }, 13900)
   }
-  
   if (command === "sides") {
     message.channel.send(`${message.author.username}` + ", **Sides Timer Set!**")
     setTimeout(function() {
