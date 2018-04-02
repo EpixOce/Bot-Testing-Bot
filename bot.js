@@ -28,9 +28,6 @@ client.on("message", message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-  const arggs = message.content.slice(configg.prefix.length).trim().split(/ +/g);
-  const commandd = arggs.shift().toLowerCase();
-  
   if (command === "adv") {
     setTimeout(function() {
         message.reply("**Adventure!** :arrow_down:");
@@ -49,6 +46,9 @@ client.on("message", message => {
         message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
     }, 19750)
   }    
+  
+  const arggs = message.content.slice(configg.prefixx.length).trim().split(/ +/g);
+  const commandd = arggs.shift().toLowerCase();
   
   if (commandd === "hunt") {
     setTimeout(function() {
