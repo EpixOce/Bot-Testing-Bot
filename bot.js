@@ -26,8 +26,6 @@ client.on("message", message => {
 
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
-  const arggs = message.content.slice(configg.prefix.length).trim().split(/ +/g);
-  const commandd = arggs.shift().toLowerCase();
   
   if (command === "adv") {
     setTimeout(function() {
@@ -42,29 +40,6 @@ client.on("message", message => {
     }, 300000)
   }
   
-  if (command === "padv") {
-    setTimeout(function() {
-        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
-    }, 19750)
-  }  
-  
-  if (commandd === "hunt") {
-    setTimeout(function() {
-        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
-    }, 19750)
-  }
-  
-  if (commandd === "fish") {
-    setTimeout(function() {
-        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
-    }, 19750)
-  }
-  
-  if (commandd === "kill") {
-    setTimeout(function() {
-        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
-    }, 19750)
-  }
 });
 
 
