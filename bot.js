@@ -1,8 +1,12 @@
-const Discord = require('discord.js');
+const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const config = require("./config.json");
 
+client.on("ready", async () => {
+  console.log(`Potato Timer is Online!`);
+});  
+  
 client.on("message", message => {
   
   if (message.author.bot) return;
@@ -17,10 +21,7 @@ client.on("message", message => {
     commandFile.run(client, message, args);
   } catch (err) {
     console.error(err);
-  }
-  
-  console.log("Potato!");
-  
+  }  
 });
 
 
