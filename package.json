@@ -1,7 +1,7 @@
 {
   "name": "Potato Timer",
   "description": "Just a Potato Timer!",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "main": "bot.js",
   "scripts": {
     "start": "node bot.js"
@@ -10,7 +10,7 @@
   "author": "Epix#4002",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "11.2.0",
+    "discord.js": "11.1.0",
     "request": "2.81.0"
   }
 }
