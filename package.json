@@ -1,15 +1,14 @@
 {
-  "name": "Potato Timer",
-  "description": "Just a Potato Timer!",
+  "name": "potatotimer",
   "version": "1.0.0",
-  "main": "bot.js",
+  "description": "A Potato Timer!",
+  "main": "index.js",
   "scripts": {
-    "start": "node bot.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
   "author": "Epix#4002",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "11.3.2"
+    "discord.js": "^11.3.2"
   }
 }
