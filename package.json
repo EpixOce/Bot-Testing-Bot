@@ -1,6 +1,6 @@
 {
   "name": "Potato Timer",
-  "description": "",
+  "description": "Just a Potato Timer!",
   "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
