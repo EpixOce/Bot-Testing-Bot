@@ -35,4 +35,4 @@ bot.on("message", async message => {
   }
 });
 
-client.login(config.token);
+bot.login(config.token);
