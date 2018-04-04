@@ -18,6 +18,11 @@ client.on("message", message => {
   } catch (err) {
     console.error(err);
   }
+  
+  console.log("Potato!");
+  
 });
+
+
 
 client.login(process.env.POTATO_TOKEN);
