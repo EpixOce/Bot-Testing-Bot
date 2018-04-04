@@ -27,21 +27,11 @@ client.on("message", message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase();
   
-  if (command === "adv") {
-    setTimeout(function() {
-        message.reply("**Adventure!** :arrow_down:");
-    }, 13900)
-  }
-  if (command === "sides") {
-    message.channel.send(`${message.author.username}` + ", **Sides Timer Set!**")
-    setTimeout(function() {
-        message.reply(" **Sides!** :carrot:");
-    }, 300000)
-  }
-  if (command === "padv") {
-  setTimeout(function() {
-        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
-    }, 19750)
+  try {
+    let commandFile = require(`./commands/${command}.js`);
+    commandFile.run(client, message, args);
+  } catch (err) {
+    console.error(err);
   }
 });
 
