@@ -35,4 +35,4 @@ bot.on("message", async message => {
   }
 });
 
-client.login(process.env.POTATO_TOKEN);
+client.login(process.env.BOT_TOKEN);
