@@ -2,37 +2,42 @@ const config = require("./config.json");
 const Discord = require("discord.js");
 
 const bot = new Discord.Client({disableEveryone: true})
+bot.commands = new Discord.Collection();
+
+const fs = require("fs");
+fs.readdir("./commands/", (err, files) => {
+
+    if(err) console.log (err);
+
+    let jsfile = files.filter(f => f.split(".").pop() === "js")
+    if(jsfile.length <= 0){
+        console.log("Cannot find command.");
+        return;
+    }
+    jsfile.forEach((f, i) => {
+        let props = require(`./commands/${f}`);
+        console.log(`${f} loaded.`);
+        bot.commands.set(props.help.name, props);
+    })
+});
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is up and running!`)
-    bot.user.setGame("DiscordRPG!")
+    bot.user.setActivity("with Epix!", {type: "PLAYING"});
 });
 
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
 
-    let prefix = config.prefix;
+    let prefix = botconfig.prefix;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
-  
-  if(cmd === `${prefix}adv`) {
-    setTimeout(function() {
-      message.reply("**Adventure!** :arrow_down:");
-    }, 13900)
-  };
-  if(cmd === `${prefix}padv`) {
-    setTimeout(function() {
-        message.reply("**Party Adventure!**, make sure it is your turn! :cherries:");
-    }, 19750)
-  };
-  if(cmd === `${prefix}sides`) {
-    message.channel.send(`${message.author.username}` + ", **Sides Timer Set!**")
-    setTimeout(function() {
-        message.reply(" **Sides!** :carrot:");
-    }, 300000)
-  }
+
+    let commandfile = bot.commands.get(cmd.slice(prefix.length));
+    if(commandfile) commandfile.run(bot, message, args);
+    
 });
 
 bot.login(process.env.BOTTOKEN);
