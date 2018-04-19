@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
+    message.delete();
     const m = await message.channel.send(`${message.author.username}` + ", **Sides Timer Set!**");
     m.delete()
         setTimeout(function() {
