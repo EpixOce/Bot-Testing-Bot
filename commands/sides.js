@@ -7,7 +7,10 @@ module.exports.run = async (bot, message, args) => {
         message.delete();
     }, 10000);
     setTimeout(function() {
-        message.reply(" **Sides!** :carrot:");
+        const r = await message.reply(" **Sides!** :carrot:");
+        setTimeout(function() {
+            r.delete();
+        }, 60000);
     }, 300000)
 }
 
