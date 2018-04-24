@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
         message.delete();
     }, 10000);
     setTimeout(async function() {
-        const r = await message.reply(" Time to **Fish!**");
+        const r = await message.reply("**Time to Fish!**");
         setTimeout(function() {
             r.delete();
         }, 30000);
