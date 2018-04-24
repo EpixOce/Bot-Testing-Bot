@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
         const r = await message.reply("**Time to Mine!**");
         setTimeout(function() {
             r.delete();
-        }, 30000);
+        }, 20000);
     }, 300000)
 }
 
