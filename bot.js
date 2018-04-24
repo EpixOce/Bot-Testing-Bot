@@ -30,7 +30,7 @@ bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
     
-    if (message.isMentioned(Client.user)) {
+    if (message.isMentioned(bot.user)) {
         const m = await message.channel.send(`${message.author.username}` + ", **Sides Timer Set!**");
         setTimeout(function() {
             m.delete();
