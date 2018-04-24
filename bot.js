@@ -37,7 +37,7 @@ bot.on("message", async message => {
             message.delete();
         }, 10000);
         setTimeout(async function() {
-            const r = await message.reply("**Sides Time!**");
+            const r = await message.reply("**Sides Time! :carrot:**");
             setTimeout(function() {
                 r.delete();
             }, 20000);
