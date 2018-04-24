@@ -4,6 +4,12 @@ module.exports.run = async (bot, message, args) => {
     setTimeout(function() {
         message.delete();
     }, 10000)
+    setTimeout(async function() {
+        const r = await message.reply(" Time to **Chop!**");
+        setTimeout(function() {
+            r.delete();
+        }, 30000);
+    }, 300000)
 }
 
 module.exports.help = {
