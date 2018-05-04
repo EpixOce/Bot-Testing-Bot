@@ -1,4 +1,2 @@
-# Potato Timer
-
-Hmmm?
+# The Timekeeper
 
