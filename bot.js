@@ -29,20 +29,6 @@ bot.on("ready", async () => {
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
-    
-    if (message.isMentioned(bot.user)) {
-        const m = await message.channel.send(`${message.author.username}` + ", **Sides Timer Set!**");
-        setTimeout(function() {
-            m.delete();
-            message.delete();
-        }, 10000);
-        setTimeout(async function() {
-            const r = await message.reply("**Sides Time! :carrot:**");
-            setTimeout(function() {
-                r.delete();
-            }, 20000);
-        }, 300000)
-    }
 
     let prefix = config.prefix;
     let messageArray = message.content.split(" ");
