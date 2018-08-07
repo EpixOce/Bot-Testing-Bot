@@ -1,7 +1,7 @@
 {
-  "name": "thetimekeeper",
+  "name": "RPG Potato",
   "version": "1.0.0",
-  "description": "The Timekeeper",
+  "description": "RPG Potato",
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
